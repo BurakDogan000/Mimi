@@ -2,10 +2,7 @@
 
 # To Do Things
 
-- 
-
-
-# İçerik
+## İçerik
 
 - (Opsiyonel) Üye tartışması.
 - Footer daha geniş ve modern olacak.
@@ -20,8 +17,22 @@
 - (Opsiyonel) Tagler kısmı resim altında metin olacak.
 
 
-# Hazır Kütüphaneler
+## Hazır Kütüphaneler
 
 - Bootstrap 5 veya en son versiyon
 - Animation.js
 - (Opsiyonel) Jquery
+
+# Theme Folders Structure
+- assets
+    - scripts
+        - global.js
+    - styles
+        - global.css
+    - media
+    - vendors
+    - fonts
+- (Opsionel) i18
+- blog
+    - blog icerigi
+- html pages (index.html, about.html, etc.)
