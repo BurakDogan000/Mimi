@@ -35,6 +35,7 @@
     - vendors
     - fonts
 - (Opsionel) i18
+- components
 - blog
     - blog icerigi
 - html pages (index.html, about.html, etc.)
