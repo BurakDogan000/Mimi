@@ -5,9 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <?php include "components/navbar.php" ?>
+    <?php include "components/tools/navbar.php" ?>
 
+    <div class="main-section">
+        <?php include "components/theme/hero.php" ?>
+    </div>
 
-    <?php include "components/footer.php" ?>
+    <?php include "components/tools/footer.php" ?>
 </body>
 </html>
