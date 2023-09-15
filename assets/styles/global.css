@@ -1,4 +1,69 @@
+/*************
+General
+***************/
 html, body {
     margin: 0;
     padding: 0;
+}
+
+button {
+    white-space: nowrap;
+}
+
+/*************
+Header
+***************/
+.header {
+    height: 30vh;
+    background-image: url("../media/header.jpg");
+    background-attachment: fixed;
+    background-position: center;
+. background-repeat: no-repeat;
+}
+
+.header-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    left: 0;
+    top: 0;
+}
+
+/*************
+Navbar
+***************/
+.navbar-brand {
+    font-size: 45px;
+    font-family: Bahnschrift;
+}
+
+/*************
+Main section
+***************/
+.main-section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/*************
+Hero
+***************/
+
+.hero-section img {
+    box-shadow: #0000005c 4px 4px 4px 2px;
+}
+
+.hero-section .img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -61px;
+    width: 100px;
+    height: 100px;
+    background: white;
+    transform: rotate(-45deg); /* Çapraz çizgiyi döndürür */
+    transform-origin: left top; /* Dönüşün başlangıç noktasını sol üst köşe yapar */
+
 }

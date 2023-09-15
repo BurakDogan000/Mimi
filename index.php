@@ -5,9 +5,10 @@
     <?php include "components/tools/head.html" ?>
 </head>
 <body>
+    <?php include "components/tools/header.html" ?>
     <?php include "components/tools/navbar.html" ?>
 
-    <div class="main-section">
+    <div class="container-fluid main-section">
         <?php include "components/theme/hero.html" ?>
     </div>
 
