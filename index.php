@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mimi - Explore The World!</title>
+    <?php include "components/tools/head.html" ?>
 </head>
 <body>
     <?php include "components/tools/navbar.html" ?>
@@ -12,5 +12,6 @@
     </div>
 
     <?php include "components/tools/footer.html" ?>
+    <?php include "components/tools/script.html" ?>
 </body>
 </html>
