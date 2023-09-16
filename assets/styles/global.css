@@ -51,19 +51,42 @@ Main section
 Hero
 ***************/
 
-.hero-section img {
-    box-shadow: #0000005c 4px 4px 4px 2px;
+.hero-section .img-container {
+    box-shadow: #0000005c 4px -4px 4px 2px;
 }
 
 .hero-section .img-container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -61px;
+    top: 0px;
+    left: -77px;
     width: 100px;
     height: 100px;
     background: white;
-    transform: rotate(-45deg); /* Çapraz çizgiyi döndürür */
-    transform-origin: left top; /* Dönüşün başlangıç noktasını sol üst köşe yapar */
+    transform: rotate(311deg);
+    transform-origin: left top;
+}
 
+.hero-section .cards {
+    box-shadow: #0000005c 0px 4px 4px 6px;
+    border-radius: 10px 0 35px 35px;
+}
+
+.hero-section .card {
+    border: 0;
+    height: 250px;
+}
+
+.hero-section .cards .col-md-4:nth-child(1) .card {
+    border-radius: 10px 0 0 35px;
+}
+
+.hero-section .cards .col-md-4:nth-child(2) .card {
+    border-radius: 0 0 0 0;
+    border-left: 1px solid gray;
+}
+
+.hero-section .cards .col-md-4:nth-child(3) .card {
+    border-radius: 0 0 35px 0;
+    border-left: 1px solid gray;
 }
