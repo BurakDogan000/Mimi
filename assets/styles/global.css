@@ -52,7 +52,12 @@ Hero
 ***************/
 
 .hero-section .img-container {
-    box-shadow: #0000005c 4px -4px 4px 2px;
+    box-shadow: #0000005c 5px 0px 4px 0px;
+    border-radius: 0 35px 0 0;
+}
+
+.hero-section .img-container img {
+    border-radius: 0 35px 0 0;
 }
 
 .hero-section .img-container::before {
@@ -68,25 +73,21 @@ Hero
 }
 
 .hero-section .cards {
-    box-shadow: #0000005c 0px 4px 4px 6px;
+    box-shadow: #0000005c 3px 2px 4px 2px;
     border-radius: 10px 0 35px 35px;
+    overflow: hidden;
 }
 
 .hero-section .card {
     border: 0;
     height: 250px;
-}
-
-.hero-section .cards .col-md-4:nth-child(1) .card {
-    border-radius: 10px 0 0 35px;
+    padding-top: 25px;
 }
 
 .hero-section .cards .col-md-4:nth-child(2) .card {
-    border-radius: 0 0 0 0;
     border-left: 1px solid gray;
 }
 
 .hero-section .cards .col-md-4:nth-child(3) .card {
-    border-radius: 0 0 35px 0;
     border-left: 1px solid gray;
 }
