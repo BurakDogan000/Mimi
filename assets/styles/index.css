@@ -1,4 +1,21 @@
 /*************
+Section
+***************/
+.section-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-content {
+    color: #696969;
+    font-size: 14px;
+    font-family: cursive;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+
+/*************
 Hero
 ***************/
 
