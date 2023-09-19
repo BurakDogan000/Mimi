@@ -10,6 +10,10 @@ button {
     white-space: nowrap;
 }
 
+section {
+    padding: 30px 0 30px 0;
+}
+
 /*************
 Header
 ***************/
@@ -45,49 +49,4 @@ Main section
     padding: 0;
     margin: 0;
     width: 100%;
-}
-
-/*************
-Hero
-***************/
-
-.hero-section .img-container {
-    box-shadow: #0000005c 5px 0px 4px 0px;
-    border-radius: 0 35px 0 0;
-}
-
-.hero-section .img-container img {
-    border-radius: 0 35px 0 0;
-}
-
-.hero-section .img-container::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: -77px;
-    width: 100px;
-    height: 100px;
-    background: white;
-    transform: rotate(311deg);
-    transform-origin: left top;
-}
-
-.hero-section .cards {
-    box-shadow: #0000005c 3px 2px 4px 2px;
-    border-radius: 10px 0 35px 35px;
-    overflow: hidden;
-}
-
-.hero-section .card {
-    border: 0;
-    height: 250px;
-    padding-top: 25px;
-}
-
-.hero-section .cards .col-md-4:nth-child(2) .card {
-    border-left: 1px solid gray;
-}
-
-.hero-section .cards .col-md-4:nth-child(3) .card {
-    border-left: 1px solid gray;
 }

@@ -3,6 +3,7 @@
 <head>
     <title>Mimi - Explore The World!</title>
     <?php include "components/tools/head.html" ?>
+    <link href="assets/styles/index.css" rel="stylesheet" />
 </head>
 <body>
     <?php include "components/tools/header.html" ?>
@@ -10,9 +11,11 @@
 
     <div class="container-fluid main-section">
         <?php include "components/theme/hero.html" ?>
+        <?php include "components/theme/categories.html" ?>
     </div>
 
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
+    <script src="assets/scripts/index.js"> </script>
 </body>
 </html>
