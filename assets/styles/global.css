@@ -18,6 +18,32 @@ section {
     padding: 30px 0 30px 0;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a span {
+    background-image: linear-gradient(black, black);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s ease;
+}
+
+a:hover span {
+    background-size: 100% 2px;
+}
+
+a.btn {
+    transition: transform .5s ease;
+    will-change: transform;
+}
+
+a.btn:hover {
+    transform: translateY(-4px);
+}
+
 /*************
 Header
 ***************/
@@ -43,7 +69,6 @@ Navbar
 ***************/
 .navbar-brand {
     font-size: 45px;
-    font-family: Bahnschrift;
 }
 
 /*************
@@ -53,4 +78,17 @@ Main section
     padding: 0;
     margin: 0;
     width: 100%;
+}
+
+/*************
+Hover Animations
+***************/
+
+.hover-top {
+    transition: transform .5s ease;
+    will-change: transform;
+}
+
+.hover-top:hover {
+    transform: translateY(-4px);
 }
