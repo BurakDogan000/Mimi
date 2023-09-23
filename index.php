@@ -13,11 +13,11 @@
         <?php include "components/theme/hero.html" ?>
         <?php include "components/theme/categories.html" ?>
         <div class="container">
-            <div class="d-flex">
+            <div class="row d-flex">
                 <div class="col-md-8">
-                   <?php include "components/theme/recent_blogs.html" ?>
+                   <?php include "components/theme/recent_blog.html" ?>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ps-md-5">
                    <?php include "components/theme/featured_blogs.html" ?>
                 </div>
             </div>

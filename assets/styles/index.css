@@ -237,6 +237,7 @@ Blogs
 
 .blogs .card .card-header .blog-category-badges a {
     margin: 2px;
+    font-size: 13px;
 }
 
 .blogs .card .card-body {
@@ -246,11 +247,11 @@ Blogs
 .blogs .card .card-body .card-title {
     font-weight: bold;
     margin: 0 0 5px;
-    font-size: 45px;
+    font-size: 30px;
 }
 
 .blogs .card .card-body .card-text {
-    font-size: 23px;
+    font-size: 17px;
     color: #5a5858;
     margin: 0 0 5px;
 }
@@ -277,9 +278,9 @@ Blogs
 }
 
 .blogs .meta .meta-avatars img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
     box-shadow: 1px 1px 7px #000000c7;
 }
 
@@ -289,7 +290,7 @@ Blogs
 }
 
 .blogs .meta .meta-contents .meta-authors {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .blogs .meta .meta-contents .meta-authors a {
@@ -297,5 +298,38 @@ Blogs
 }
 
 .blogs .meta .meta-contents .meta-date {
+    font-size: 10px;
+}
+
+/*************
+Recent Blog Section
+***************/
+
+.recent-blog-section .blogs .card .card-header .blog-category-badges a {
+    font-size: 17px;
+}
+
+.recent-blog-section .blogs .card .card-body .card-title {
+    font-weight: bold;
+    margin: 0 0 5px;
+    font-size: 45px;
+}
+
+.recent-blog-section .blogs .card .card-body .card-text {
+    font-size: 23px;
+}
+
+.recent-blog-section .blogs .meta .meta-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 7px #000000c7;
+}
+
+.recent-blog-section .blogs .meta .meta-contents .meta-authors {
+    font-size: 14px;
+}
+
+.recent-blog-section .blogs .meta .meta-contents .meta-date {
     font-size: 12px;
 }
