@@ -92,3 +92,12 @@ Hover Animations
 .hover-top:hover {
     transform: translateY(-4px);
 }
+
+.img-link img {
+    transition: transform .5s ease;
+    will-change: transform;
+}
+
+.img-link:hover img {
+    transform: scale(1.2);
+}

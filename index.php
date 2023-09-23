@@ -16,6 +16,7 @@
             <div class="row d-flex">
                 <div class="col-md-8">
                    <?php include "components/theme/recent_blog.html" ?>
+                   <?php include "components/theme/blogs.html" ?>
                 </div>
                 <div class="col-md-4 ps-md-5">
                    <?php include "components/theme/featured_blogs.html" ?>
