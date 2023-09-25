@@ -2,61 +2,101 @@
 Section
 ***************/
 .section-header {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .section-content {
-    color: #696969;
-    font-size: 14px;
-    padding-bottom: 25px;
-    text-align: center;
+  color: #696969;
+  font-size: 14px;
+  padding-bottom: 25px;
+  text-align: center;
 }
-
 
 /*************
 Hero
 ***************/
 
 .hero-section .img-container {
-    box-shadow: #0000005c 5px 0px 4px 0px;
-    border-radius: 0 35px 0 0;
+  box-shadow: #0000005c 5px 0px 4px 0px;
+  border-radius: 0 35px 0 0;
 }
 
 .hero-section .img-container img {
-    border-radius: 0 35px 0 0;
+  border-radius: 0 35px 0 0;
 }
 
 .hero-section .img-container::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: -77px;
-    width: 100px;
-    height: 100px;
-    background: white;
-    transform: rotate(311deg);
-    transform-origin: left top;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -77px;
+  width: 100px;
+  height: 100px;
+  background: white;
+  transform: rotate(311deg);
+  transform-origin: left top;
 }
 
 .hero-section .cards {
-    box-shadow: #0000005c 3px 2px 4px 2px;
-    border-radius: 10px 0 35px 35px;
-    overflow: hidden;
+  box-shadow: #0000005c 3px 2px 4px 2px;
+  border-radius: 10px 0 35px 35px;
+  overflow: hidden;
 }
 
 .hero-section .card {
-    border: 0;
-    height: 250px;
-    padding-top: 25px;
+  border: 0;
+  height: 250px;
+  padding-top: 25px;
 }
 
 .hero-section .cards .col-md-4:nth-child(2) .card {
-    border-left: 1px solid gray;
+  border-left: 1px solid gray;
 }
 
 .hero-section .cards .col-md-4:nth-child(3) .card {
-    border-left: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.hero-section .typing {
+  overflow: hidden;
+  display: flex;
+}
+
+.hero-section .font {
+  font-weight: bold;
+}
+
+/* Yanıp sönme animasyonunu tanımlar */
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.hero-section .input-cursor {
+  width: 2px;
+  height: 42px;
+  background-color: black;
+  animation: blink 0.6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*************
@@ -64,144 +104,148 @@ Categories
 ***************/
 
 .categories-section .categories-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .categories-section .categories-container .credit {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: inherit;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: inherit;
 }
 
 .categories-section .categories-container .options {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
 }
 
 .categories-section .categories-container .options .option {
-    flex-grow: 1;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
-    min-width: 100px;
-    margin: 10px;
-    background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  flex-grow: 1;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  min-width: 100px;
+  margin: 10px;
+  background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
 .categories-section .categories-container .options .option.active {
-    flex-grow: 10000;
-    transform: scale(1);
-    margin: 0;
-    border-radius: 40px;
-    background-size: cover;
+  flex-grow: 10000;
+  transform: scale(1);
+  margin: 0;
+  border-radius: 40px;
+  background-size: cover;
 }
 
 .categories-section .categories-container .options .option:nth-child(1) {
-    --defaultBackground: #ED5565;
+  --defaultBackground: #ed5565;
 }
 
 .categories-section .categories-container .options .option:nth-child(2) {
-    --defaultBackground: #FC6E51;
+  --defaultBackground: #fc6e51;
 }
 
 .categories-section .categories-container .options .option:nth-child(3) {
-    --defaultBackground: #FFCE54;
+  --defaultBackground: #ffce54;
 }
 
 .categories-section .categories-container .options .option:nth-child(4) {
-    --defaultBackground: #2ECC71;
+  --defaultBackground: #2ecc71;
 }
 
 .categories-section .categories-container .options .option:nth-child(5) {
-    --defaultBackground: #5D9CEC;
+  --defaultBackground: #5d9cec;
 }
 
 .categories-section .categories-container .options .option:nth-child(6) {
-    --defaultBackground: #AC92EC;
+  --defaultBackground: #ac92ec;
 }
 
 .categories-section .categories-container .options .option .label-shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
-.categories-section .categories-container .options .option.active .label-shadow {
-    background: #00000029;
+.categories-section
+  .categories-container
+  .options
+  .option.active
+  .label-shadow {
+  background: #00000029;
 }
 
 .categories-section .categories-container .options .option .label {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
 .categories-section .categories-container .options .option .label .icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: white;
-    color: var(--defaultBackground);
-    position: absolute;
-    bottom: calc(50% - 25px);
-    left: calc(50% - 26px);
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+  position: absolute;
+  bottom: calc(50% - 25px);
+  left: calc(50% - 26px);
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
 .categories-section .categories-container .options .option.active .label .icon {
-    width: 80px;
-    height: 80px;
-    bottom: 10px;
-    left: 10px;
+  width: 80px;
+  height: 80px;
+  bottom: 10px;
+  left: 10px;
 }
 
 .categories-section .categories-container .options .option .label .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    white-space: pre;
-    left: calc(50% - 35px);
-    top: 0;
-    opacity: 0;
-    position: absolute;
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  white-space: pre;
+  left: calc(50% - 35px);
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
 
 .categories-section .categories-container .options .option.active .label .info {
-    top: calc(50% - 20px);
-    opacity: 1;
+  top: calc(50% - 20px);
+  opacity: 1;
 }
 
 .categories-section .categories-container .options .option .label .info .main {
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 /*************
@@ -209,96 +253,155 @@ Blogs
 ***************/
 
 .blogs .card {
-    border: 0;
+  border: 0;
 }
 
 .blogs .card .card-header {
-    border: 0;
-    padding: 0;
-    display: flex;
-    position: relative;
-    border-radius: 35px;
-    box-shadow: 4px 4px 20px 2px #0000009c;
-    overflow: hidden;
+  border: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  border-radius: 35px;
+  box-shadow: 4px 4px 20px 2px #0000009c;
+  overflow: hidden;
 }
 
 .blogs .card .card-header .blog-category-badges {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .blogs .card .card-header .blog-category-badges a {
-    margin: 2px;
-    font-size: 13px;
+  margin: 2px;
+  font-size: 13px;
 }
 
 .blogs .card .card-body {
-    padding: 25px 0 25px 0;
+  padding: 25px 0 25px 0;
 }
 
 .blogs .card .card-body .card-title {
-    font-weight: bold;
-    margin: 0 0 5px;
-    font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  font-size: 30px;
 }
 
 .blogs .card .card-body .card-text {
-    font-size: 17px;
-    color: #5a5858;
-    margin: 0 0 5px;
+  font-size: 17px;
+  color: #5a5858;
+  margin: 0 0 5px;
 }
 
 .blogs .card .card-footer {
-    border: 0;
-    background: none;
-    padding: 0;
-    margin: 0;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 .blogs .meta {
-    display: flex;
+  display: flex;
 }
 
 .blogs .meta .meta-avatars {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 .blogs .meta .meta-avatars a {
-    margin-left: -5px;
+  margin-left: -5px;
 }
 
 .blogs .meta .meta-avatars img {
-    width: 25px;
-    height: 25px;
-    border-radius: 30px;
-    box-shadow: 1px 1px 7px #000000c7;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 7px #000000c7;
 }
 
 .blogs .meta .meta-contents {
-    margin-left: 10px;
-    color: #616161;
+  margin-left: 10px;
+  color: #616161;
 }
 
 .blogs .meta .meta-contents .meta-authors {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .blogs .meta .meta-contents .meta-authors a {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .blogs .meta .meta-contents .meta-date {
-    font-size: 10px;
+  font-size: 10px;
+}
+
+/*************
+Blogs Section
+***************/
+
+.blogs-section .blogs card{
+    margin-bottom: 48px;
+}
+
+/*************
+Featured Blog Section
+***************/
+
+.featured-blogs-section {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.featured-blogs-section .card {
+  padding: 20px;
+}
+
+.featured-blogs-section .card .card-header .blog-category-badges a {
+  padding: 5px;
+  margin: 2px;
+  font-size: 10px;
+}
+
+.featured-blogs-section .card .card-body {
+  padding: 10px 0 5px 0;
+}
+
+.featured-blogs-section .meta .meta-contents {
+  margin-left: 0;
+  color: #616161;
+}
+
+.featured-blogs-section::-webkit-scrollbar {
+    width: 6px;
+}
+  
+/* Track */
+.featured-blogs-section::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.featured-blogs-section::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.featured-blogs-section::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 /*************
@@ -306,30 +409,42 @@ Recent Blog Section
 ***************/
 
 .recent-blog-section .blogs .card .card-header .blog-category-badges a {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .recent-blog-section .blogs .card .card-body .card-title {
-    font-weight: bold;
-    margin: 0 0 5px;
-    font-size: 45px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  font-size: 45px;
 }
 
 .recent-blog-section .blogs .card .card-body .card-text {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 .recent-blog-section .blogs .meta .meta-avatars img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    box-shadow: 1px 1px 7px #000000c7;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 1px 1px 7px #000000c7;
 }
 
 .recent-blog-section .blogs .meta .meta-contents .meta-authors {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .recent-blog-section .blogs .meta .meta-contents .meta-date {
-    font-size: 12px;
+  font-size: 12px;
+}
+
+
+/*************
+Footer
+***************/
+
+.footer-section .card {
+    background-color: gray;
+    padding: 25px;
+    border: 0;
+    border-radius: 50px;
 }

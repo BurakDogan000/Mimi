@@ -18,13 +18,14 @@
                    <?php include "components/theme/recent_blog.html" ?>
                    <?php include "components/theme/blogs.html" ?>
                 </div>
-                <div class="col-md-4 ps-md-5">
+                <div class="col-md-4 ps-md-5 position-relative">
                    <?php include "components/theme/featured_blogs.html" ?>
                 </div>
             </div>
+            <?php include "components/theme/property.html" ?>
         </div>
     </div>
-
+    <?php include "components/theme/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
     <script src="assets/scripts/index.js"> </script>
