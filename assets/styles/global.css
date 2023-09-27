@@ -45,6 +45,21 @@ a.btn:hover {
 }
 
 /*************
+Section
+***************/
+.section-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-content {
+    color: #696969;
+    font-size: 14px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+/*************
 Header
 ***************/
 .header {
