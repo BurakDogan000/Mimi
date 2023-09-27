@@ -83,4 +83,31 @@ document.addEventListener("DOMContentLoaded", function () {
     function waitForMs(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
+
+    /*************
+     Blogs
+     ***************/
+    let showMoreBtn = document.getElementsByClassName(
+        ".blogs-section .show-more-btn"
+    );
+
+    const activeBlogs = [
+        {
+            title: "Blog Heading",
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a pellentesque urna. Duis ut suscipit felis, sit amet interdum nisl. Sed tincidunt tellus felis, et tempor magna pretium eu.",
+            authors: [
+                {
+                    img: "avatar-1.webp",
+                    name: "Burak Dogan"
+                }
+            ],
+            date: "October 7, 2023",
+            lastRead: ""
+        }
+    ];
+    const passiveBlogs = [];
+
+    showMoreBtn.addEventListener("onclick", function () {
+
+    });
 });
