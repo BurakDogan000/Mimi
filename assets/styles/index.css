@@ -76,11 +76,13 @@ Hero
   }
 }
 
-.hero-section .input-cursor {
+.hero-section .font::after {
   width: 2px;
   height: 42px;
+  content: "";
   background-color: black;
   animation: blink 0.6s linear infinite alternate;
+  display: inline-block;
 }
 
 @keyframes blink {
@@ -197,6 +199,10 @@ Blogs
 
 .blogs-section .blogs card{
   margin-bottom: 48px;
+}
+
+.blogs .row {
+  margin-top: 10px;
 }
 
 /*************

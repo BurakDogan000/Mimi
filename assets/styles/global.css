@@ -23,7 +23,8 @@ a {
     color: unset;
 }
 
-a span {
+a span,
+.btn span {
     background-image: linear-gradient(black, black);
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -31,16 +32,17 @@ a span {
     transition: background-size .3s ease;
 }
 
-a:hover span {
+a:hover span,
+.btn:hover span {
     background-size: 100% 2px;
 }
 
-a.btn {
+.btn {
     transition: transform .5s ease;
     will-change: transform;
 }
 
-a.btn:hover {
+.btn:hover {
     transform: translateY(-4px);
 }
 

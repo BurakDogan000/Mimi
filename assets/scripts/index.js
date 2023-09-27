@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Hero
      ***************/
+    /*var typed2 = new Typed('#feature-text', {
+        strings: ['Explore the world, protect your health', 'Travel, stay healthy', 'May your journey be healthy', 'Travel and health: Two passions, one website'],
+        typeSpeed: 85,
+        backSpeed: 50,
+        fadeOut: false,
+        loop: true
+    });*/
+
     const carouselText = [
         {text: "Explore the world, protect your health.", color: "#000"},
         {text: "Travel, stay healthy.", color: "#000"},
@@ -26,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {text: "Travel and health: Two passions, one website.", color: "#000"},
     ];
 
-    document.addEventListener("DOMContentLoaded", async function () {
-        carousel(carouselText, "#feature-text");
-    });
+    carousel(carouselText, "#feature-text");
 
     async function typeSentence(sentence, eleRef, delay = 100) {
         const letters = sentence.split("");
@@ -87,27 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Blogs
      ***************/
-    let showMoreBtn = document.getElementsByClassName(
-        ".blogs-section .show-more-btn"
-    );
-
-    const activeBlogs = [
-        {
-            title: "Blog Heading",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a pellentesque urna. Duis ut suscipit felis, sit amet interdum nisl. Sed tincidunt tellus felis, et tempor magna pretium eu.",
-            authors: [
-                {
-                    img: "avatar-1.webp",
-                    name: "Burak Dogan"
-                }
-            ],
-            date: "October 7, 2023",
-            lastRead: ""
-        }
-    ];
-    const passiveBlogs = [];
-
-    showMoreBtn.addEventListener("onclick", function () {
-
+    let infScroll = new InfiniteScroll( '.blogs-section .blogs', {
+        path: ".blogs-section .show-more a",
+        append: '.blogs-section .blogs .row',
+        button: '.blogs-section .show-more button',
+        hideNav: '.blogs-section .show-more a',
+        scrollThreshold: false,
+        history: false,
     });
 });

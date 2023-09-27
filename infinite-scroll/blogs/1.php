@@ -1,9 +1,5 @@
 <section class="blogs-section">
     <div class="container">
-        <h2 class="section-header">H2 Heading</h2>
-        <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo eros, molestie a
-            malesuada eu, eleifend pretium velit. Donec quam elit, ullamcorper vitae mollis nec, molestie quis magna. Nunc
-            malesuada vestibulum eros, at gravida elit vestibulum vel.</p>
         <div class="blogs">
             <div class="row">
                 <article class="col-md-4">
@@ -114,8 +110,8 @@
             </div>
         </div>
         <div class="w-100 pt-5 text-center show-more">
-            <a href="/mimi/infinite-scroll/blogs/1.html" class="d-none"></a>
-            <button href="javascript:void(0);" class="btn btn-outline-primary btn-lg"><span>Show More</span></button>
+            <a href="/mimi/infinite-scroll/blogs/2.html" class="d-none"></a>
+            <a href="javascript:void(0);" class="btn btn-outline-primary btn-lg"><span>Show More</span></a>
         </div>
     </div>
 </section>

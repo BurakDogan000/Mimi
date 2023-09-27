@@ -29,6 +29,8 @@
     <?php include "components/tools/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
+    <script src="assets/vendors/infinite-scroll/infinite-scroll.pkgd.min.js"> </script>
+    <script src="assets/vendors/typed/typed.min.js"> </script>
     <script src="assets/scripts/index.js"> </script>
 </body>
 </html>
