@@ -141,7 +141,7 @@ Categories
 }
 
 .categories-section .categories-container .options .option.active {
-    flex-grow: 10000;
+    flex-grow: 7;
     transform: scale(1);
     margin: 0;
     border-radius: 40px;
