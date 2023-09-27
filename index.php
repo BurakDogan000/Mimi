@@ -10,22 +10,23 @@
     <?php include "components/tools/navbar.html" ?>
 
     <div class="container-fluid main-section">
-        <?php include "components/theme/hero.html" ?>
-        <?php include "components/theme/categories.html" ?>
+        <?php include "components/theme/index/hero.html" ?>
+        <?php include "components/theme/index/categories.html" ?>
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-8">
-                   <?php include "components/theme/recent_blog.html" ?>
-                   <?php include "components/theme/blogs.html" ?>
+                   <?php include "components/theme/index/recent_blog.html" ?>
+                   <?php include "components/theme/index/blogs.html" ?>
                 </div>
                 <div class="col-md-4 ps-md-5 position-relative">
-                   <?php include "components/theme/featured_blogs.html" ?>
+                   <?php include "components/theme/index/featured_blogs.html" ?>
                 </div>
             </div>
-            <?php include "components/theme/property.html" ?>
+            <?php include "components/theme/index/property.html" ?>
         </div>
     </div>
-    <?php include "components/theme/subscribe.html" ?>
+
+    <?php include "components/tools/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
     <script src="assets/scripts/index.js"> </script>
