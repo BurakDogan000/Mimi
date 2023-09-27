@@ -1,12 +1,12 @@
 /*************
 Section
 ***************/
-.home-page .section-header {
+.section-header {
   text-align: center;
   font-weight: bold;
 }
 
-.home-page .section-content {
+.section-content {
   color: #696969;
   font-size: 14px;
   padding-bottom: 25px;

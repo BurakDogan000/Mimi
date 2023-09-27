@@ -5,7 +5,7 @@
     <?php include "components/tools/head.html" ?>
     <link href="assets/styles/index.css" rel="stylesheet" />
 </head>
-<body class="home-page">
+<body>
     <?php include "components/tools/header.html" ?>
     <?php include "components/tools/navbar.html" ?>
 
