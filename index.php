@@ -16,14 +16,14 @@
             <div class="row d-flex">
                 <div class="col-md-8">
                    <?php include "components/theme/index/recent_blog.html" ?>
-                   <?php include "components/theme/index/blogs.html" ?>
                 </div>
-                <div class="col-md-4 ps-md-5 position-relative">
+                <div class="col-md-4 ps-md-5">
                    <?php include "components/theme/index/featured_blogs.html" ?>
                 </div>
             </div>
-            <?php include "components/theme/index/property.html" ?>
         </div>
+        <?php include "components/theme/index/property.html" ?>
+        <?php include "components/theme/index/blogs.html" ?>
     </div>
 
     <?php include "components/tools/subscribe.html" ?>

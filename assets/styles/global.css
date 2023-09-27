@@ -72,12 +72,337 @@ Navbar
 }
 
 /*************
-Main section
+Main
 ***************/
 .main-section {
     padding: 0;
     margin: 0;
     width: 100%;
+}
+
+/*************
+Categories
+***************/
+
+.categories-section .categories-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.categories-section .categories-container .credit {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: inherit;
+}
+
+.categories-section .categories-container .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.categories-section .categories-container .options .option {
+    flex-grow: 1;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    min-width: 100px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.categories-section .categories-container .options .option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    margin: 0;
+    border-radius: 40px;
+    background-size: cover;
+}
+
+.categories-section .categories-container .options .option:nth-child(1) {
+    --defaultBackground: #ed5565;
+}
+
+.categories-section .categories-container .options .option:nth-child(2) {
+    --defaultBackground: #fc6e51;
+}
+
+.categories-section .categories-container .options .option:nth-child(3) {
+    --defaultBackground: #ffce54;
+}
+
+.categories-section .categories-container .options .option:nth-child(4) {
+    --defaultBackground: #2ecc71;
+}
+
+.categories-section .categories-container .options .option:nth-child(5) {
+    --defaultBackground: #5d9cec;
+}
+
+.categories-section .categories-container .options .option:nth-child(6) {
+    --defaultBackground: #ac92ec;
+}
+
+.categories-section .categories-container .options .option .label-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.categories-section
+.categories-container
+.options
+.option.active
+.label-shadow {
+    background: #00000029;
+}
+
+.categories-section .categories-container .options .option .label {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.categories-section .categories-container .options .option .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+    position: absolute;
+    bottom: calc(50% - 25px);
+    left: calc(50% - 26px);
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.categories-section .categories-container .options .option.active .label .icon {
+    width: 80px;
+    height: 80px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.categories-section .categories-container .options .option .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    white-space: pre;
+    left: calc(50% - 35px);
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+
+.categories-section .categories-container .options .option.active .label .info {
+    top: calc(50% - 20px);
+    opacity: 1;
+}
+
+.categories-section .categories-container .options .option .label .info .main {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/*************
+Footer
+***************/
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+    background: #151414;
+    position: relative;
+}
+.footer-cta {
+    border-bottom: 1px solid #373636;
+}
+.single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+.cta-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.cta-text span {
+    color: #757575;
+    font-size: 15px;
+}
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+.footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.footer-logo {
+    margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 28px;
+}
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+}
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+.facebook-bg{
+    background: #3B5998;
+}
+.twitter-bg{
+    background: #55ACEE;
+}
+.google-bg{
+    background: #DD4B39;
+}
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+}
+.footer-widget ul li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+    color: #ff5e14;
+}
+.footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+}
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+}
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+    color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+}
+.copyright-area{
+    background: #202020;
+    padding: 25px 0;
+}
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+.copyright-text p a{
+    color: #ff5e14;
+}
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.footer-menu li:hover a{
+    color: #ff5e14;
+}
+.footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+}
+
+/*************
+Subscribe
+***************/
+
+.subscribe-section .card {
+    background-color: gray;
+    padding: 25px;
+    border: 0;
+    border-radius: 50px;
 }
 
 /*************
