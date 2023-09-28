@@ -97,7 +97,7 @@ form.sign-in-form {
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-field input:placeholder {
   color: #aaa;
   font-weight: 500;
 }
@@ -160,7 +160,7 @@ form.sign-in-form {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.container::before {
+.container:before {
   content: "";
   position: absolute;
   height: 2000px;
@@ -233,7 +233,7 @@ form.sign-in-form {
 
 /* ANIMATION */
 
-.container.sign-up-mode::before {
+.container.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
 }
@@ -270,7 +270,7 @@ form.sign-in-form {
   pointer-events: all;
 }
 
-@media (max-width: 570px) {
+@media (width <= 575.98px) {
   form {
     padding: 0 1.5rem;
   }
@@ -296,7 +296,7 @@ form.sign-in-form {
   }
 }
 
-@media (max-width: 870px) {
+@media (width <= 870px) {
   .container {
     min-height: 800px;
     height: 100vh;
