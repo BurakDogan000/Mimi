@@ -278,3 +278,49 @@ Recent Blog
 .recent-blog-section .blogs .meta .meta-contents .meta-date {
   font-size: 12px;
 }
+
+/*************
+Discover
+***************/
+
+.discover-section .container {
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-section .main-card {
+  border: 0;
+  padding: 50px;
+  background: unset;
+}
+
+.discover-section .discover-img{
+  overflow: hidden;
+  border-radius: 20px;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../media/header.jpg");
+}
+
+.discover-section .discover-mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 992px){
+  .discover-section .discover-img{
+    width: 100%;
+    border-radius: 0;
+  }
+}
