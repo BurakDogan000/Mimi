@@ -280,33 +280,70 @@ Recent Blog
 }
 
 /*************
+Property
+***************/
+.property-section .cards .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-section .cards .icon span {
+  background: #e6e6e6;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.property-section .cards .icon i {
+  font-size: 35px;
+  color: var(--propertyIconColor);
+}
+
+.property-section .cards .card {
+  border: 0;
+  background: #ffffff;
+  box-shadow: 1px 1px 7px 0px #00000038;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.property-section .cards .card-title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.property-section .cards .card-text {
+  color: #717171;
+  font-size: 15px;
+}
+
+.property-section .content {
+  padding-bottom: 10px;
+}
+
+/*************
 Discover
 ***************/
 
 .discover-section .container {
+  padding: 80px 50px;
   position: relative;
   overflow: hidden;
-}
-
-.discover-section .main-card {
-  border: 0;
-  padding: 50px;
-  background: unset;
-}
-
-.discover-section .discover-img{
-  overflow: hidden;
-  border-radius: 20px;
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  top: 0;
-  left: 0;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../media/header.jpg");
+  border-radius: 15px;
+}
+
+.discover-section .main-card {
+  border: 0;
+  background: unset;
 }
 
 .discover-section .discover-mask{
@@ -319,8 +356,7 @@ Discover
 }
 
 @media screen and (max-width: 992px){
-  .discover-section .discover-img{
-    width: 100%;
+  .discover-section .container{
     border-radius: 0;
   }
 }
