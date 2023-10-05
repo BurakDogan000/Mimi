@@ -110,7 +110,7 @@
             </div>
         </div>
         <div class="w-100 pt-5 text-center show-more">
-            <a href="/mimi/infinite-scroll/blogs/2.html" class="d-none"></a>
+            <a href="/mimi/infinite-scroll/blogs/2" class="d-none"></a>
             <a href="javascript:void(0);" class="btn btn-outline-primary btn-lg"><span>Show More</span></a>
         </div>
     </div>

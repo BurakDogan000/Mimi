@@ -24,7 +24,6 @@
         </div>
         <?php include "components/theme/index/property.html" ?>
         <?php include "components/theme/index/blogs.html" ?>
-        <?php include "components/theme/index/discover.html" ?>
     </div>
 
     <?php include "components/tools/subscribe.html" ?>

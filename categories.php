@@ -14,6 +14,7 @@
     <div class="container-fluid main-section">
         <?php include "components/theme/categories/categories.html" ?>
     </div>
+
     <?php include "components/tools/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
