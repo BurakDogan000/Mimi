@@ -6,37 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Navbar
      ***************/
-    const header = document.querySelector(".start-style");
-    const navbarNav = document.querySelector(".navbar-nav");
-    const navbarBrand = document.querySelector(".navbar-brand");
+    const header = document.querySelector(".navbar-section");
 
     window.addEventListener("scroll", function () {
-        const navbarRect = header.getBoundingClientRect();
         const mainRect = mainSection.getBoundingClientRect();
-        //var scroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (navbarRect.top <= 0 && mainRect.top <= (navbarRect.height * -1)) {
+        if (mainRect.top <= 0) {
             header.classList.remove("start-style");
             header.classList.add("scroll-on");
-            navbarNav.classList.remove("m-auto");
-            navbarNav.classList.add("ms-auto");
-           // navbarBrand.classList.remove("d-none");
         } else {
             header.classList.remove("scroll-on");
             header.classList.add("start-style");
-            navbarNav.classList.remove("ms-auto");
-            navbarNav.classList.add("m-auto");
-           /* setTimeout(function () {
-                navbarBrand.classList.add("d-none");
-            }, 0.3);*/
         }
     });
-
-    // Animation
-    const body = document.body;
-    if (body.classList.contains("hero-anime")) {
-        body.classList.remove("hero-anime");
-    }
 
     // Menu On Hover
     const navItems = document.querySelectorAll(".nav-item");

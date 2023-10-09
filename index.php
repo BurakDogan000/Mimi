@@ -14,10 +14,10 @@
         <?php include "components/theme/index/categories.html" ?>
         <div class="container">
             <div class="row d-flex">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                    <?php include "components/theme/index/recent_blog.html" ?>
                 </div>
-                <div class="col-md-4 ps-md-5">
+                <div class="col-lg-4 ps-lg-5">
                    <?php include "components/theme/index/featured_blogs.html" ?>
                 </div>
             </div>
