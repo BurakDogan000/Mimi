@@ -2,14 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Categories
      ***************/
-    let categories = document.querySelectorAll(
-        ".categories-section .categories-container .option"
-    );
+    let $categories = document.querySelectorAll(".categories-section .categories-container .option");
 
-    categories.forEach(function (category) {
-        category.addEventListener("mouseover", function () {
-            categories.forEach(function (cat) {
-                cat.classList.remove("active");
+    $categories.forEach(function ($category) {
+        $category.addEventListener("mouseover", function () {
+            $categories.forEach(function ($cat) {
+                $cat.classList.remove("active");
             });
 
             this.classList.add("active");
@@ -19,71 +17,61 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Hero
      ***************/
-    /*var typed2 = new Typed('#feature-text', {
-        strings: ['Explore the world, protect your health', 'Travel, stay healthy', 'May your journey be healthy', 'Travel and health: Two passions, one website'],
-        typeSpeed: 85,
-        backSpeed: 50,
-        fadeOut: false,
-        loop: true
-    });*/
+    const carouselText = [{
+        text: "Explore the world, protect your health.",
+        color: "#000"
+    }, {text: "Travel, stay healthy.", color: "#000"}, {
+        text: "May your journey be healthy.",
+        color: "#000"
+    }, {text: "Travel and health: Two passions, one website.", color: "#000"},];
 
-    const carouselText = [
-        {text: "Explore the world, protect your health.", color: "#000"},
-        {text: "Travel, stay healthy.", color: "#000"},
-        {text: "May your journey be healthy.", color: "#000"},
-        {text: "Travel and health: Two passions, one website.", color: "#000"},
-    ];
+    const $text = document.querySelector("#feature-text")
+    carousel(carouselText);
 
-    carousel(carouselText, "#feature-text");
-
-    async function typeSentence(sentence, eleRef, delay = 100) {
+    async function typeSentence(sentence, delay = 100) {
+        $text.classList.add("typing");
         const letters = sentence.split("");
         let i = 0;
-        const ele = document.querySelector(eleRef);
         while (i < letters.length) {
             await waitForMs(delay);
-            ele.innerHTML += letters[i];
+            $text.innerHTML += letters[i];
             i++;
-            ele.scrollTop = ele.scrollHeight;
+            $text.scrollTop = $text.scrollHeight;
         }
-        return;
+        $text.classList.remove("typing");
     }
 
-    async function deleteSentence(eleRef) {
-        const ele = document.querySelector(eleRef);
-        const sentence = ele.innerHTML;
+    async function deleteSentence() {
+        $text.classList.add("typing");
+        const sentence = $text.innerHTML;
         const letters = sentence.split("");
         while (letters.length > 0) {
             await waitForMs(100);
             letters.pop();
-            ele.innerHTML = letters.join("");
-            ele.scrollTop = ele.scrollHeight;
+            $text.innerHTML = letters.join("");
+            $text.scrollTop = $text.scrollHeight;
         }
+        $text.classList.remove("typing");
     }
 
-    async function carousel(carouselList, eleRef) {
+    async function carousel(carouselList) {
         var i = 0;
         while (i < carouselList.length) {
-            updateFontColor(eleRef, carouselList[i].color);
-            await typeSentence(carouselList[i].text, eleRef);
             await waitForMs(1500);
-            if (i < carouselList.length - 1) {
-                await deleteSentence(eleRef);
-                await waitForMs(500);
-            }
+            updateFontColor(carouselList[i].color);
+            await typeSentence(carouselList[i].text);
+            await waitForMs(1500);
+            await deleteSentence();
 
             i++;
             if (i == carouselList.length) {
-                await deleteSentence(eleRef);
-                await waitForMs(500);
                 i = 0;
             }
         }
     }
 
-    function updateFontColor(eleRef, color) {
-        const ele = document.querySelector(eleRef);
-        ele.style.color = color;
+    function updateFontColor(color) {
+        $text.style.color = color;
     }
 
     function waitForMs(ms) {
@@ -93,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Blogs
      ***************/
-    let infScroll = new InfiniteScroll( '.blogs-section .blogs', {
+    let infScroll = new InfiniteScroll('.blogs-section .blogs', {
         path: ".blogs-section .show-more a",
         append: '.blogs-section .blogs .row',
         button: '.blogs-section .show-more button',

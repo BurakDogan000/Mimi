@@ -58,22 +58,15 @@ Hero
   border-left: 1px solid gray;
 }
 
-.hero-section .typing {
+.hero-section .type {
   overflow: hidden;
   display: flex;
+  min-height: 170px;
+  align-items: center;
 }
 
 .hero-section .font {
   font-weight: bold;
-}
-
-@keyframes blink {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 .hero-section .font::after {
@@ -81,8 +74,12 @@ Hero
   height: 42px;
   content: "";
   background-color: black;
-  animation: blink 0.6s linear infinite alternate;
+  animation: blink 0.4s linear infinite alternate;
   display: inline-block;
+}
+
+.hero-section .font.typing::after {
+  animation: none;
 }
 
 @keyframes blink {
