@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "#000"
     }, {text: "Travel and health: Two passions, one website.", color: "#000"},];
 
-    const $text = document.querySelector("#feature-text")
+    const $text = document.querySelector("#feature-text");
     carousel(carouselText);
 
     async function typeSentence(sentence, delay = 100) {
@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var i = 0;
         while (i < carouselList.length) {
             await waitForMs(1500);
+
             updateFontColor(carouselList[i].color);
             await typeSentence(carouselList[i].text);
             await waitForMs(1500);

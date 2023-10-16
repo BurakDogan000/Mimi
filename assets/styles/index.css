@@ -18,8 +18,9 @@ Hero
 ***************/
 
 .hero-section .img-container {
-  box-shadow: #0000005c 5px 0px 4px 0px;
-  border-radius: 0 35px 0 0;
+  box-shadow: #0000005c 5px 5px 5px 0px;
+  border-radius: 0 35px 35px 35px;
+  overflow: hidden;
 }
 
 .hero-section .img-container img {
@@ -92,7 +93,7 @@ Featured Blog
 .featured-blogs-section {}
 
 .featured-blogs-section .card {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .featured-blogs-section .card .card-header .blog-category-badges a {
@@ -169,7 +170,7 @@ Property
 }
 
 .property-section .cards .icon span {
-  background: #e6e6e6;
+  background: var(--bg-color);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -185,7 +186,6 @@ Property
 
 .property-section .cards .card {
   border: 0;
-  background: #ffffff;
   box-shadow: 1px 1px 7px 0px #00000038;
   padding: 20px;
   margin-bottom: 10px;

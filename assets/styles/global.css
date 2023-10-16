@@ -757,7 +757,7 @@ Subscribe
 Discover
 ***************/
 
-.subscribe-section .container {
+.subscribe-section .content {
     padding: 80px 50px;
     position: relative;
     overflow: hidden;
@@ -784,7 +784,7 @@ Discover
 }
 
 @media screen and (max-width: 992px) {
-    .subscribe-section .container {
+    .subscribe-section .content {
         border-radius: 0;
     }
 }
