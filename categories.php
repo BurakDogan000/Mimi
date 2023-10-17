@@ -3,9 +3,7 @@
 <head>
     <title>Mimi - Explore The World!</title>
     <?php include "components/tools/head.html" ?>
-    <link href="assets/styles/index.css" rel="stylesheet" />
-    <link href="assets/styles/global.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link href="assets/styles/categories.css" rel="stylesheet" />
 </head>
 <body>
     <?php include "components/tools/header.html" ?>
@@ -18,7 +16,5 @@
     <?php include "components/tools/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
-    
-    <script src="assets/scripts/index.js"> </script>
 </body>
 </html>

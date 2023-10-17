@@ -8,7 +8,7 @@
 <body>
     <?php include "components/tools/header.html" ?>
 
-    <div class="container-fluid main-section">
+    <div class="container-fluid main-section" id="main-section">
         <?php include "components/tools/navbar.html" ?>
         <?php include "components/theme/index/hero.html" ?>
         <?php include "components/theme/index/categories.html" ?>
