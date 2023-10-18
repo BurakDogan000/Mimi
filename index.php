@@ -6,10 +6,10 @@
     <link href="assets/styles/index.css" rel="stylesheet" />
 </head>
 <body>
+    <?php include "components/tools/navbar.html" ?>
     <?php include "components/tools/header.html" ?>
 
     <div class="container-fluid main-section" id="main-section">
-        <?php include "components/tools/navbar.html" ?>
         <?php include "components/theme/index/hero.html" ?>
         <?php include "components/theme/index/categories.html" ?>
         <div class="container">
@@ -29,8 +29,6 @@
     <?php include "components/tools/subscribe.html" ?>
     <?php include "components/tools/footer.html" ?>
     <?php include "components/tools/script.html" ?>
-    <script src="assets/vendors/infinite-scroll/infinite-scroll.pkgd.min.js"> </script>
-    <script src="assets/vendors/typed/typed.min.js"> </script>
     <script src="assets/scripts/index.js"> </script>
 </body>
 </html>

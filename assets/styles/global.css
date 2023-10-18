@@ -109,7 +109,7 @@ Header
 }
 
 .header-section.home {
-    height: 90vh;
+    height: 100vh;
 }
 
 .header-section .video-wrap {
@@ -174,32 +174,27 @@ Header
 Navbar
 ***************/
 .navbar-section {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
     display: flex;
     align-items: center;
     opacity: 1;
     transform: translateY(0);
-    padding: 20px 0;
-    box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    min-height: 10vh;
+    padding: 10px 0;
 }
 
 .navbar-section.start-style {
-    position: sticky;
+    position: absolute;
+    background: transparent;
 }
 
 .navbar-section.scroll-on {
+    position: fixed;
     box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    background: #fff;
 }
 
 .navbar-section .navbar {
@@ -207,15 +202,12 @@ Navbar
 }
 
 .navbar-section .navbar-brand {
-    animation: animate-navbar-brand-fadeIn 0.3s ease-in-out forwards;
+    color: #fff;
+    transition: color 0.3s linear;
 }
 
-.navbar-section.start-style .navbar-brand {
-    animation: animate-navbar-brand-fadeOut 0.3s ease-in-out forwards;
-}
-
-.navbar-section .navbar-brand.start-style {
-    display: none;
+.navbar-section.scroll-on .navbar-brand {
+    color: #212121;
 }
 
 .navbar-section .navbar-brand h2 {
@@ -278,19 +270,18 @@ Navbar
     margin: auto;
 }
 
-.navbar-section.start-style .navbar-nav {
-    animation: animate-navbar-nav-go-center 0.5s ease-in-out forwards;
-}
-
-.navbar-section.scroll-on .navbar-nav {
-    animation: animate-navbar-nav-go-right 0.5s ease-in-out forwards;
-    padding-right: 25px;
-}
-
 .navbar-section .nav-link {
-    color: #212121 !important;
+    position: relative;
+    padding: 5px 0 !important;
+    display: inline-block;
+    color: #fff;
     font-weight: 500;
-    transition: all 200ms linear;
+    font-size: 16px;
+    transition: color 0.3s linear;
+}
+
+.navbar-section.scroll-on .nav-link {
+    color: #212121;
 }
 
 .navbar-section .nav-item:hover .nav-link {
@@ -299,12 +290,6 @@ Navbar
 
 .navbar-section .nav-item.active .nav-link {
     color: #777 !important;
-}
-
-.navbar-section .nav-link {
-    position: relative;
-    padding: 5px 0 !important;
-    display: inline-block;
 }
 
 .navbar-section .nav-item:after {
@@ -330,13 +315,7 @@ Navbar
 
 .navbar-section .nav-item {
     position: relative;
-    transition: all 200ms linear;
     margin-left: 1.5rem;
-}
-
-.navbar-section.bg-light {
-    background-color: #fff !important;
-    transition: all 200ms linear;
 }
 
 .navbar-section .nav-item .dropdown-menu {
@@ -355,12 +334,6 @@ Navbar
     visibility: visible;
     max-height: 999px;
     transform: translate3d(0, 0px, 0) !important;
-}
-
-.navbar-section.start-style .nav-item .dropdown-menu {
-    transform: translate3d(0, -10px, 0);
-    top: auto;
-    bottom: 100%;
 }
 
 .navbar-section .dropdown-menu {
@@ -397,18 +370,12 @@ Navbar
 ================================================== */
 
 @media (max-width: 767px) {
-    .navbar-section.start-style .navbar-collapse {
-        position: fixed;
-        background: white;
-        top: auto;
-        bottom: 99%;
-        width: 100%;
-        left: 0;
-        padding-left: 1.5rem;
+    .navbar-section.start-style {
+
     }
 
-    .navbar-section .navbar-collapse.collapse {
-        min-height: 324px;
+    .navbar-section .nav-link{
+        color: #212121;
     }
 
     .navbar-section .nav-item {
@@ -490,62 +457,6 @@ Navbar
         transform: none;
     }
 }
-
-/* #Animations
-================================================== */
-
-@keyframes animate-navbar-nav-go-right {
-    0% {
-        opacity: 0;
-        margin: unset;
-        margin-left: auto;
-    }
-    100% {
-        opacity: 1;
-        margin: unset;
-        margin-left: auto;
-    }
-}
-
-@keyframes animate-navbar-nav-go-center {
-    0% {
-        opacity: 1;
-        margin: unset;
-        margin-left: auto;
-        padding-right: 25px;
-    }
-    50% {
-        opacity: 0;
-    }
-    85% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        margin: auto;
-    }
-}
-
-@keyframes animate-navbar-brand-fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        display: none !important;
-        opacity: 0;
-    }
-}
-
-@keyframes animate-navbar-brand-fadeIn {
-    from {
-        display: unset !important;
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /*************
 Categories
 ***************/
