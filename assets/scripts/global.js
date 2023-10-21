@@ -6,17 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     /*************
      Navbar
      ***************/
-    const $header = document.querySelector(".navbar-section");
+    const $navbarSection = document.querySelector(".navbar-section");
 
     window.addEventListener("scroll", function () {
         const mainRect = $mainSection.getBoundingClientRect();
-        console.log(mainRect.top)
         if (mainRect.top <= 0) {
-            $header.classList.remove("start-style");
-            $header.classList.add("scroll-on");
+            $navbarSection.classList.remove("start-style");
+            $navbarSection.classList.add("scroll-on");
         } else {
-            $header.classList.remove("scroll-on");
-            $header.classList.add("start-style");
+            $navbarSection.classList.remove("scroll-on");
+            $navbarSection.classList.add("start-style");
         }
     });
 
